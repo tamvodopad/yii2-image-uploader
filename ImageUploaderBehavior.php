@@ -378,7 +378,7 @@ class ImageUploaderBehavior extends Behavior
         if (!empty($size)) {
             return $folder . static::addPrefixToFile($image, $size);
         } else {
-            return $folder . $image;
+            return $folder . static::addPostfixToFile($image, '_original');
         }
     }
 
